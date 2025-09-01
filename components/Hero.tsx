@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
 import ValuesBar from "@/components/ValuesBar";
+import Magnetic from "@/components/Magnetic";
+import EvasiveButtonViewport from "@/components/EvasiveButtonViewport";
 
 const NeuralMesh = dynamic(() => import("@/components/NeuralMesh"), { ssr: false });
 const TrustRings = dynamic(() => import("@/components/TrustRings"), { ssr: false });
@@ -12,8 +14,8 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* Decorative interactive objects */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-0 top-0 w-[60vw] max-w-[880px] h-[60vh] -translate-x-1/3 -translate-y-1/4 opacity-70">
+      <div className="absolute inset-0">
+        <div className="absolute left-0 top-0 w-[60vw] max-w-[900px] h-[70vh] -translate-x-1/3 -translate-y-1/4 opacity-70 pointer-events-auto">
           <NeuralMesh />
         </div>
         <div className="absolute right-[-10%] top-[-20%] w-[50vw] max-w-[680px] h-[70vh] opacity-60">
@@ -35,9 +37,9 @@ export default function Hero() {
             <span className="block text-white">Dario Patt</span>
             <span className="block text-fg/80 mt-2">
               {/* Tagline options (pick one): 
-                 - Curious systems. Dependable software.
-                 - Learning in public. Building reliable tools.
-                 - Systems-minded. Human-centered. */}
+                - Curious systems. Dependable software.
+                - Learning in public. Building reliable tools.
+                - Systems-minded. Human-centered. */}
               Curious systems. <span className="text-accent">Dependable</span> software.
             </span>
           </h1>
@@ -46,12 +48,18 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="mailto:hello@dariopatt.dev" className="btn-accent">
+            <Magnetic><a href="mailto:hello@dariopatt.dev" className="btn-accent">
               Let’s collaborate <ArrowRight className="h-4 w-4" />
-            </a>
+            </a></Magnetic>
             <a href="/projects" className="btn-ghost">
               See selected work
             </a>
+              {/* Troll mode 😈 */}
+            <EvasiveButtonViewport
+              href="/projects"
+              className="btn-ghost"
+              maxEvades={10}                    // stop after 10 jumps
+            >SUPER SECRET WORK 😈</EvasiveButtonViewport>
           </div>
 
           <div className="mt-10">

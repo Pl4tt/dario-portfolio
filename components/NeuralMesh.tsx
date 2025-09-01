@@ -42,8 +42,8 @@ export default function NeuralMesh() {
     }
     function onMouseLeave() { mouse.current = null; }
 
-    canvas.addEventListener("mousemove", onMouseMove);
-    canvas.addEventListener("mouseleave", onMouseLeave);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseleave", onMouseLeave);
 
     function frame() {
       ctx.clearRect(0, 0, width, height);
@@ -111,8 +111,8 @@ export default function NeuralMesh() {
     return () => {
       cancelAnimationFrame(animationId);
       ro.disconnect();
-      canvas.removeEventListener("mousemove", onMouseMove);
-      canvas.removeEventListener("mouseleave", onMouseLeave);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseleave", onMouseLeave);
     };
   }, []);
 

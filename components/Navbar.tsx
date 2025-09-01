@@ -5,6 +5,7 @@ import { Github, FileDown, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import ModeToggle from "@/components/ModeToggle"
 
 const nav = [
   { href: "/projects", label: "Projects" },
@@ -67,6 +68,7 @@ export default function Navbar() {
               <Mail className="h-4 w-4" />
               <span className="hidden lg:inline">Contact</span>
             </a>
+            <ModeToggle />
           </div>
         </div>
       </div>
