@@ -9,6 +9,7 @@ import ModeToggle from "@/components/ModeToggle"
 
 const nav = [
   { href: "/projects", label: "Projects" },
+   { href: "/skills", label: "Skills" },
   { href: "/experiments", label: "Experiments" },
   { href: "/writing", label: "Writing" },
   { href: "/about", label: "About" },

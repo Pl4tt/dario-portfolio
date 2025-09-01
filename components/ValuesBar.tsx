@@ -26,7 +26,7 @@ export default function ValuesBar() {
           <div className={`absolute inset-0 bg-gradient-to-b ${v.hue} opacity-0 group-hover:opacity-100 transition-opacity`} />
           <div className="relative flex items-center gap-2">
             <v.icon className="h-4 w-4" />
-            <span>{v.label}</span>
+            <span className="pointer-events-none">{v.label}</span>
           </div>
         </motion.div>
       ))}

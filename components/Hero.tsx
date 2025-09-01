@@ -44,7 +44,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-fg/70 max-w-2xl">
-            I explore, prototype, and ship — bridging ideas into systems that people can trust. Med‑tech internships, backend-leaning projects, and playful experiments.
+            I explore, prototype, and ship — bridging ideas into systems that people can trust. MedTech / AI internships, backend-leaning projects, and playful experiments.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import PageHeader from "@/components/PageHeader";
 import SectionCard from "@/components/SectionCard";
+import SkillsSection from "@/components/skills/SkillsSection";
 
 export default function AboutPage() {
   return (
@@ -38,6 +39,7 @@ export default function AboutPage() {
           </ul>
         </SectionCard>
       </div>
+      <SkillsSection />
     </main>
   );
 }
